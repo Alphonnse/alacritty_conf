@@ -1,0 +1,232 @@
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: FiraCodeNerdFont
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: FiraCodeNerdFont
+    # family: Hack
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: FiraCodeNerdFont
+    # family: Hack
+    # Style can be specified to pick a specific face.
+    style: Italic
+  size: 9
+
+
+
+
+window:
+  dimensions:
+    columns: 75
+    lines: 30
+  title: A
+  opacity: 1
+  padding:
+    x: 0
+    y: 0
+  decorations: full
+  dynamic_padding: true
+  use_thin_strokes: true
+
+
+
+schemes:
+  ayudark: &ayudark # Default colors
+    primary:
+      background: "0x0A0E14"
+      foreground: "0xB3B1AD"
+    # Normal colors
+    normal:
+      black: "0x01060E"
+      red: "0xEA6C73"
+      green: "0x91B362"
+      yellow: "0xF9AF4F"
+      blue: "0x53BDFA"
+      magenta: "0xFAE994"
+      cyan: "0x90E1C6"
+      white: "0xC7C7C7"
+
+    # Bright colors
+    bright:
+      black: "0x686868"
+      red: "0xF07178"
+      green: "0xC2D94C"
+      yellow: "0xFFB454"
+      blue: "0x59C2FF"
+      magenta: "0xFFEE99"
+      cyan: "0x95E6CB"
+      white: "0xFFFFFF"
+  # Doom One
+  doom-one: &doom-one
+    primary:
+      background: "#282c34"
+      foreground: "#bbc2cf"
+    cursor:
+      text: CellBackground
+      cursor: "#528bff"
+    selection:
+      text: CellForeground
+      background: "#3e4451"
+    normal:
+      black: "#1c1f24"
+      red: "#ff6c6b"
+      green: "#98be65"
+      yellow: "#da8548"
+      blue: "#51afef"
+      magenta: "#c678dd"
+      cyan: "#5699af"
+      white: "#202328"
+    bright:
+      black: "#5b6268"
+      red: "#da8548"
+      green: "#4db5bd"
+      yellow: "#ecbe7b"
+      blue: "#3071db" # This is 2257a0 in Doom Emacs but I lightened it.
+      magenta: "#a9a1e1"
+      cyan: "#46d9ff"
+      white: "#dfdfdf"
+
+
+
+
+  # Dracula
+  dracula: &dracula
+    colors:
+      primary:
+        background: "#282a36"
+        foreground: "#f8f8f2"
+      cursor:
+        text: CellBackground
+        cursor: CellForeground
+      vi_mode_cursor:
+        text: CellBackground
+        cursor: CellForeground
+      search:
+        matches:
+          foreground: "#44475a"
+          background: "#50fa7b"
+        focused_match:
+          foreground: "#44475a"
+          background: "#ffb86c"
+        bar:
+          background: "#282a36"
+          foreground: "#f8f8f2"
+      line_indicator:
+        foreground: None
+        background: None
+      selection:
+        text: CellForeground
+        background: "#44475a"
+      normal:
+        black: "#000000"
+        red: "#ff5555"
+        green: "#50fa7b"
+        yellow: "#f1fa8c"
+        blue: "#bd93f9"
+        magenta: "#ff79c6"
+        cyan: "#8be9fd"
+        white: "#bfbfbf"
+      bright:
+        black: "#4d4d4d"
+        red: "#ff6e67"
+        green: "#5af78e"
+        yellow: "#f4f99d"
+        blue: "#caa9fa"
+        magenta: "#ff92d0"
+        cyan: "#9aedfe"
+        white: "#e6e6e6"
+      dim:
+        black: "#14151b"
+        red: "#ff2222"
+        green: "#1ef956"
+        yellow: "#ebf85b"
+        blue: "#4d5b86"
+        magenta: "#ff46b0"
+        cyan: "#59dffc"
+        white: "#e6e6d1"
+
+
+
+  #GNOME Dark
+  gnome: &gnome
+    colors:
+      primary:
+        foreground: '#d0cfcc'
+        background: '#171421'
+        bright_foreground: '#ffffff'
+      normal:
+        black:   '#171421'
+        red:     '#c01c28'
+        green:   '#26a269'
+        yellow:  '#a2734c'
+        blue:    '#12488b'
+        magenta: '#a347ba'
+        cyan:    '#2aa1b3'
+        white:   '#d0cfcc'
+      bright:
+        black:   '#5e5c64'
+        red:     '#f66151'
+        green:   '#33d17a'
+        yellow:  '#e9ad0c'
+        blue:    '#2a7bde'
+        magenta: '#c061cb'
+        cyan:    '#33c7de'
+        white:   '#ffffff'
+
+  #IR
+  IR: &IR
+   colors:
+      # Default colors
+      primary:
+        background: '#000000'
+        foreground: '#ffffff'
+      cursor:
+        text: '#ffffff'
+        cursor: '#ffffff'
+      # Normal colors
+      normal:
+        black:   '#4e4e4e'
+        red:     '#ff6c60'
+        green:   '#a8ff60'
+        yellow:  '#ffffb6'
+        blue:    '#96cbfe'
+        magenta: '#ff73fd'
+        wcyan:    '#c6c5fe'
+        white:   '#eeeeee'
+
+      # Bright colors
+      bright:
+        black:   '#7c7c7c'
+        red:     '#ffb6b0'
+        green:   '#ceffab'
+        yellow:  '#ffffcb'
+        blue:    '#b5dcfe'
+        magenta: '#ff9cfe'
+        cyan:    '#dfdffe'
+        white:   '#ffffff'
+
+# Choose ONE color scheme from those available in the above list.
+#colors: *dracula
+#colors: *doom-one
+#colors: *ayudark
+#colors: *gnome
+colors: *IR
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Space, mods: Alt, chars: " " }
+  - { key: Back, mods: Super, chars: "\x15" } # delete word/line
+  - { key: Left, mods: Alt, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
+  - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
+  - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
+  - { key: R, mods: Command, chars: "\x1bR" }
